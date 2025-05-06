@@ -8,11 +8,12 @@ from Score import Score
 pygame.init()
 clock = pygame.time.Clock()
 
-background = pygame.image.load("sprites/background-day.png").convert_alpha()
 
-screen = pygame.display.set_mode((background.get_width(), background.get_height()))
+screen = pygame.display.set_mode((288, 512))
 
 pygame.display.set_caption("Piccio Bird")
+
+background = pygame.image.load("sprites/background-day.png").convert_alpha()
 
 is_active = True
 lose_text = pygame.font.Font(None, 50)
