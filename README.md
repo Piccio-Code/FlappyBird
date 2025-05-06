@@ -2,7 +2,8 @@
 A Python/Pygame implementation of the classic Flappy Bird game with custom sprites and mechanics.
 
 ![image](https://github.com/user-attachments/assets/5f56e782-76a2-4630-9057-308aa3d61382)
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/b72437cf-7556-4333-9896-db5ac4306af4)
+
 
 
 ## 🎮 Features
