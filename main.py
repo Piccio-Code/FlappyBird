@@ -1,7 +1,6 @@
 import sys
 import pygame
 
-from settings import *
 from Player import Player
 from Obstacle import Obstacle
 from Score import Score
@@ -9,7 +8,9 @@ from Score import Score
 pygame.init()
 clock = pygame.time.Clock()
 
-screen = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
+background = pygame.image.load("sprites/background-day.png").convert_alpha()
+
+screen = pygame.display.set_mode((background.get_width(), background.get_height()))
 
 pygame.display.set_caption("Piccio Bird")
 
@@ -23,7 +24,6 @@ text1 = play_again.render("Press p to play again", True, "Black")
 text_rect = text.get_rect(center = (screen.get_width() // 2, screen.get_height() // 2))
 text1_rect = text1.get_rect(midtop = (text_rect.centerx, text_rect. bottom + 10))
 
-background = pygame.image.load("sprites/background-day.png").convert_alpha()
 
 ground = pygame.image.load("sprites/base.png")
 ground_rect = ground.get_rect(bottomleft = (0, screen.get_height()))
@@ -35,7 +35,7 @@ score = Score(screen)
 obstacle_timer = pygame.USEREVENT + 1
 pygame.time.set_timer(obstacle_timer, 900)
 
-obstacle_list: list[Obstacle] = []
+obstacle_list: list [Obstacle] = []
 
 while True:
     screen.blit(background, (0, 0))
