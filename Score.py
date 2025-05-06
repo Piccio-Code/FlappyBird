@@ -1,5 +1,3 @@
-from selectors import SelectSelector
-
 import pygame
 import math
 
